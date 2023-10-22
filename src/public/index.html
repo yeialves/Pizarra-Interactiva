@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizarra Facherita</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+   <!-- Contenedor de la primera imagen -->
+   <div class="image-container" id="gatito-container">
+    <img src="Gatito.gif" alt="Gatito">
+  </div>
+
+  <!-- Contenedor de la segunda imagen -->
+  <div class="image-container" id="minita-container">
+    <img src="Minita.gif" alt="Minita">
+  </div>
+
+  <div class="mode-button-container">
+    <button id="pencilButton" class="mode-button">
+      <img src="pencil.png" alt="Lápiz">
+    </button>
+    <button id="eraserButton" class="mode-button">
+      <img src="eraser.png" alt="Goma">
+    </button>
+    <input id="brushSizeInput" type="number" min="1" max="10" step="1" value="2">
+  </div>
+
+
+  <!-- Elemento para el fondo -->
+  <div class="background"></div> 
+
+  <div class="canvas-container">
+    <canvas id="drawing"></canvas>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
+

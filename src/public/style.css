@@ -1,0 +1,112 @@
+/* Estilo global aplicado a todos los elementos en la página */
+
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; /* Define el modelo de caja como "border-box" para que el relleno y el borde se incluyan en el ancho y alto de los elementos */
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Evita el desplazamiento de la página */
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+.canvas-container {
+  position: relative; 
+  width: 70%; /* Ancho del lienzo igual al 70% del viewport */
+  height: 80%; /* Altura del lienzo igual al 80% del viewport */
+  margin: 0;
+  padding: 0;
+  background-image: url('Hojita.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor sin recortarla */
+  background-repeat: no-repeat; 
+  background-position: center; 
+  overflow: hidden; 
+  border: 5px solid transparent; 
+  background-clip: padding-box; /* Asegura que el fondo no se extienda por debajo del borde */
+  border-image: linear-gradient(to right, rgb(255, 0, 247), rgb(3, 186, 247)); 
+  border-image-slice: 1;
+  z-index: 2; /* Coloca el canvas encima del fondo */
+}
+
+canvas {
+  position:absolute; /* Establece una posición absoluta para el canvas dentro del contenedor */
+  width: 100%; 
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('Fondito.jpg'); 
+  background-size: contain;
+  z-index: 1; /* Coloca el fondo detrás del canvas */
+}
+
+/* Estilos para los botones de modo */
+.mode-button-container {
+  display: flex;
+  flex-direction: column; /* Coloca los botones en una columna */
+  align-items: flex-end; /* Alinea los botones a la derecha */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.mode-button {
+  display: block;
+  background: none;
+  border: none;
+  margin-bottom: 10px; /* Espaciado entre los botones */
+  cursor: pointer;
+}
+
+/* Estilo para las imágenes dentro de los botones */
+.mode-button img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Establece el estilo para el tamaño del pincel */
+#brushSizeInput {
+  position: absolute;
+  top: 50px;
+  right: 60px;
+  width: 40px;
+  padding: 5px;
+  z-index: 2;
+}
+
+/* Estilos para los contenedores de imágenes */
+.image-container {
+  z-index: 3; 
+}
+
+/* Estilos específicos para cada imagen */
+#gatito-container {
+  transform: scale(0.2); 
+  position: absolute; 
+  top: -160px; 
+  right: 100px; 
+}
+
+#minita-container {
+  transform: scale(0.2); 
+  position: absolute; 
+  top: 420px; 
+  left: -150px; 
+}
+
